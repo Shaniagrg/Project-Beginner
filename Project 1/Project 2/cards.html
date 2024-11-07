@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cards</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width: 100vw;
+                height: 100vh;
+                background-color: #8BC6EC;
+                background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*why display flex?
+                ans: cuz inside the contianer there's a <div> with class card that should be in center and flex*/
+
+            }
+
+            .card{
+                width: 360px;
+                height: 570px;
+                background-color: #fff;
+                gap: 30px;
+                /*This brings gaps between each box like img,h2 and p of 30px so that they wont look close to each other*/
+                padding: 20px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 15px;
+                /*why flex and no justified?
+                ans: cuz the container has 3 items image, heading, paragragh which should be in center
+                and in column* so no justify-content*/
+            }
+
+            .card img{
+                width: 99%;
+                height: 57%;
+                border-radius: 15px;
+            }
+
+            .card h2{
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+            .card p{
+                font-size: 1.2em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="card">
+                <img src="qrcode.jpeg" alt="qrcode">
+                <h2>
+                    Improve your front end skills by building projects
+                </h2>
+                <p>
+                    Scan the QR Code to visit Front End mentor and take your coding skill to next level.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
